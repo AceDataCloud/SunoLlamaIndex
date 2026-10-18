@@ -21,9 +21,11 @@ Official policy: https://github.com/run-llama/llama_index/blob/main/CONTRIBUTING
 New integration packages must live outside the monorepo. Do not add `pyproject.toml` there.
 LlamaHub is archived and its site now points to the current integration docs.
 
-After the package has a real install URL, propose a short docs-only entry to the
-Agent Tools section of the official integrations guide or an externally maintained
-Tool Specs subsection of the official tools guide. Use this factual copy:
+A docs-only draft has been submitted to the externally maintained Tool Specs
+subsection of the official tools guide: https://github.com/run-llama/llama_index/pull/23574 .
+It clearly links the source/release status rather than claiming a PyPI installation
+already works. Keep it draft until source/release gates and maintainer review are satisfied.
+The factual entry is:
 
 > **Suno by Ace Data Cloud**: independently maintained LlamaIndex ToolSpec for music
 > generation and retrieval of the same asynchronous task. Install
@@ -32,6 +34,6 @@ Tool Specs subsection of the official tools guide. Use this factual copy:
 > URLs are not final results. Source and bilingual onboarding:
 > https://github.com/AceDataCloud/SunoLlamaIndex
 
-This is prepared material, not submitted or approved. Do not claim a PyPI install
+The draft is submitted, not approved or merged. Do not claim a PyPI install
 works or a directory listing exists before verifying it. No unsolicited marketing
 or review-reminder messages are part of publication.
