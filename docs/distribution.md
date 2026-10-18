@@ -1,39 +1,25 @@
-# Release and official discovery handoff
+# Release and official discovery
 
-- Standard package: `llama-index-tools-suno-acedatacloud`.
-- Native namespace: `llama_index.tools.suno_acedatacloud.SunoToolSpec`.
-- Service title: **Suno by Ace Data Cloud**; keywords only Suno, LlamaIndex, music/audio, Ace Data Cloud.
-- Scope: music submission plus same-task retrieval. No bundled unrelated services, LLM provider or fallback.
-- License: MIT. Maintainer: Ace Data Cloud. Not an official Suno/LlamaIndex product.
+Source implementation is merged. Version: **0.1.0**.
 
-## Publication gates
+- GitHub release (wheel + sdist): https://github.com/AceDataCloud/SunoLlamaIndex/releases/tag/v0.1.0
+- Installable wheel: https://github.com/AceDataCloud/SunoLlamaIndex/releases/download/v0.1.0/llama_index_tools_suno_acedatacloud-0.1.0-py3-none-any.whl
+- Package: `llama-index-tools-suno-acedatacloud`.
 
-1. Review and merge the source PR only with explicit authorization.
-2. An authorized existing PyPI owner configures a new or pending Trusted Publisher for this package:
-   owner `AceDataCloud`, repo `SunoLlamaIndex`, workflow `publish.yml`, environment `pypi`.
-   No new identity, protocol acceptance or credential is created by this PR.
-3. Review release contents and publish tag `v0.1.0`; verify PyPI wheel bytes and install into a new environment.
-4. Independent PyPI publication is not an official LlamaIndex directory listing.
+The existing authorized organization `PYPI_TOKEN` is available; no new account or
+Trusted Publisher setup is required for the chosen token publication path. PyPI
+new-project creation is temporarily limited for both the account and source IP.
+The observed shared reset is 2026-10-20 03:23:23 Asia/Shanghai; publication should
+resume only after the reset and a registry readback. No identity or IP workaround.
 
-## Official docs contribution packet
+A published GitHub release builds and attaches the wheel/sdist independently.
+The maintainer then uses workflow_dispatch on `publish.yml` with the existing
+tag `v0.1.0` to publish the same source after registry quota is available.
+Read the registry version/digests first; never replace immutable release files.
 
-Official policy: https://github.com/run-llama/llama_index/blob/main/CONTRIBUTING.md
-New integration packages must live outside the monorepo. Do not add `pyproject.toml` there.
-LlamaHub is archived and its site now points to the current integration docs.
-
-A docs-only draft has been submitted to the externally maintained Tool Specs
-subsection of the official tools guide: https://github.com/run-llama/llama_index/pull/23574 .
-It clearly links the source/release status rather than claiming a PyPI installation
-already works. Keep it draft until source/release gates and maintainer review are satisfied.
-The factual entry is:
-
-> **Suno by Ace Data Cloud**: independently maintained LlamaIndex ToolSpec for music
-> generation and retrieval of the same asynchronous task. Install
-> `llama-index-tools-suno-acedatacloud`, set an Ace application token, and use
-> `SunoToolSpec().to_tool_list()`. Generation may consume credits; pending preview
-> URLs are not final results. Source and bilingual onboarding:
-> https://github.com/AceDataCloud/SunoLlamaIndex
-
-The draft is submitted, not approved or merged. Do not claim a PyPI install
-works or a directory listing exists before verifying it. No unsolicited marketing
-or review-reminder messages are part of publication.
+Official discovery contribution: https://github.com/run-llama/llama_index/pull/23574 .
+It is not accepted or merged yet. New integration packages stay independent under
+https://github.com/run-llama/llama_index/blob/main/CONTRIBUTING.md .
+GitHub installation, PyPI publication, official listing, native real-task validation
+and billing/acquisition are separate stages. The release is not official endorsement.
+No paid test, new account, terms acceptance or permission expansion is part of this workflow.
