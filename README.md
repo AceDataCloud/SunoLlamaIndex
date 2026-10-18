@@ -16,12 +16,13 @@ Ace-provided Suno integration, not an official Suno or LlamaIndex product.
 
 Python 3.10–3.12 are tested. The standard distribution name is
 `llama-index-tools-suno-acedatacloud` (namespace `llama_index.tools.suno_acedatacloud`).
-**Initial release status: source PR; not yet published to PyPI or listed by LlamaIndex.**
-Do not expect `pip install llama-index-tools-suno-acedatacloud` to work until a
-release is published. Use the exact commit/PR or download its wheel for review:
+**Source is merged; release distribution: [GitHub v0.1.0](https://github.com/AceDataCloud/SunoLlamaIndex/releases/tag/v0.1.0).**
+PyPI publication is pending the shared new-project quota; an official LlamaIndex
+listing is not yet approved. Install the wheel from the GitHub release after
+checking that the release assets are present:
 
 ```bash
-python -m pip install "llama-index-tools-suno-acedatacloud @ git+https://github.com/AceDataCloud/SunoLlamaIndex.git@codex/native-suno-tools"
+python -m pip install "https://github.com/AceDataCloud/SunoLlamaIndex/releases/download/v0.1.0/llama_index_tools_suno_acedatacloud-0.1.0-py3-none-any.whl"
 ```
 
 This installs the native tool package, not the older SDK search/extraction example.
@@ -156,7 +157,7 @@ prove a paid generation, final media, a unique bill, official listing or revenue
 
 | Symptom | Action |
 |---|---|
-| Package not found on PyPI | Initial release is not published yet; use the source PR/commit for review. |
+| Package not found on PyPI | Use the published GitHub wheel while PyPI project-creation quota is pending. |
 | Missing key or 401 | Copy the full raw application token; check expiry, permissions and service access. |
 | 403 or insufficient balance | Inspect the upstream SDK error and account limits; do not generate repeatedly. |
 | 429 or network timeout | Automatic retries are off; inspect submission/task history before another generation. |
@@ -168,9 +169,10 @@ prove a paid generation, final media, a unique bill, official listing or revenue
 
 This package follows LlamaIndex's independent integration naming and namespace.
 [Upstream policy](https://github.com/run-llama/llama_index/blob/main/CONTRIBUTING.md)
-no longer accepts new packages in the monorepo. A release workflow using PyPI
-Trusted Publishing is prepared; its project/publisher setup and human review
-must be completed before publication. The old LlamaHub site has moved to the
+no longer accepts new packages in the monorepo. The existing authorized organization publisher is reused. The shared registry
+new-project quota is the current PyPI gate; GitHub assets are independent.
+See [release and retry details](docs/distribution.md).
+The old LlamaHub site has moved to the
 [current official integration docs](https://developers.llamaindex.ai/python/framework/community/integrations/).
 Official discoverability and default inclusion are not claimed.
 

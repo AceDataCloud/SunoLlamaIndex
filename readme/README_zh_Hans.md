@@ -10,10 +10,10 @@
 ## 1. 安装正确的包
 
 标准发行名：`llama-index-tools-suno-acedatacloud`，Python 3.10+。
-**当前为源码 PR，尚未发布 PyPI，也没有官方目录收录证明。** 审查期从分支安装：
+**源码已合并；GitHub v0.1.0 发行入口：https://github.com/AceDataCloud/SunoLlamaIndex/releases/tag/v0.1.0 。** PyPI 受共享新项目额度限制，官方收录仍待审批。先核发行页工件已齐，再安装 wheel：
 
 ```bash
-python -m pip install "llama-index-tools-suno-acedatacloud @ git+https://github.com/AceDataCloud/SunoLlamaIndex.git@codex/native-suno-tools"
+python -m pip install "https://github.com/AceDataCloud/SunoLlamaIndex/releases/download/v0.1.0/llama_index_tools_suno_acedatacloud-0.1.0-py3-none-any.whl"
 ```
 
 不是旧的检索教程；这是可导入的原生 `BaseToolSpec` 包。
@@ -93,13 +93,11 @@ CI 在新环境安装 wheel 再执行；不发真实 API，不产生真实音乐
 
 ## 常见问题
 
-- PyPI 找不到：当前未正式发布，使用源码 PR；源码合并、发包和官方收录分别验收。
+- PyPI 找不到：共享新项目额度未恢复，使用GitHub正式wheel；发包与官方收录分别验收。
 - 401：重查完整 Token、有效期、应用与 Suno 权限。
 - 403/余额不足：读 SDK 错误与当前账户限制，不能反复生成碰碰运气。
 - 429/网络超时：禁重试；先查是否已提交，再决定下一步。
 - 一直 pending：等 15 秒查同一 ID，预览不是终态。
 - 查任务无权限：同一应用 Key 必须有 `/suno/tasks` 权限；知道别人的 task ID 不等于有权限。
 
-发行工作流已准备 PyPI Trusted Publishing，需要真实项目/发布者配置与人工审查后才能发版。
-[官方政策](https://github.com/run-llama/llama_index/blob/main/CONTRIBUTING.md)支持新集成独立维护、发布 PyPI，
-主仓不接受新增 package；不能把本地安装当成官方可搜安装。
+现有组织PYPI_TOKEN已确认可用，不需要新账号或另配Trusted Publisher。当前PyPI门槛为共享账号/IP新建项目额度，已知重置时间2026-10-20 03:23:23（北京时间）；发行GitHub wheel与它分开。管理员届时先读registry，再对既有v0.1.0标签手动执行publish.yml发布，不换身份/IP。官方收录单独验收；不能把本地安装当成官方可搜安装。
