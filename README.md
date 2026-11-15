@@ -16,14 +16,18 @@ Ace-provided Suno integration, not an official Suno or LlamaIndex product.
 
 Python 3.10–3.12 are tested. The standard distribution name is
 `llama-index-tools-suno-acedatacloud` (namespace `llama_index.tools.suno_acedatacloud`).
-**Source is merged; release distribution: [GitHub v0.1.0](https://github.com/AceDataCloud/SunoLlamaIndex/releases/tag/v0.1.0).**
-PyPI publication is pending the shared new-project quota; an official LlamaIndex
-listing is not yet approved. Install the wheel from the GitHub release after
-checking that the release assets are present:
+**Published on PyPI: [0.1.0](https://pypi.org/project/llama-index-tools-suno-acedatacloud/0.1.0/).**
+Install the ordinary package name:
 
 ```bash
-python -m pip install "https://github.com/AceDataCloud/SunoLlamaIndex/releases/download/v0.1.0/llama_index_tools_suno_acedatacloud-0.1.0-py3-none-any.whl"
+python -m pip install "llama-index-tools-suno-acedatacloud==0.1.0"
 ```
+
+The [GitHub v0.1.0 release](https://github.com/AceDataCloud/SunoLlamaIndex/releases/tag/v0.1.0)
+provides the same wheel and source archive as an alternate distribution. On
+2026-11-15, both PyPI file digests matched those original assets and a fresh
+Python 3.12 consumer checked the native tool schemas without an API request.
+Official LlamaIndex listing remains subject to maintainer review.
 
 This installs the native tool package, not the older SDK search/extraction example.
 The package uses the published Ace SDK; it does not copy shared SDK or MCP code.
@@ -157,7 +161,7 @@ prove a paid generation, final media, a unique bill, official listing or revenue
 
 | Symptom | Action |
 |---|---|
-| Package not found on PyPI | Use the published GitHub wheel while PyPI project-creation quota is pending. |
+| Package installation fails | Use the exact name above, Python 3.10+ and a reachable PyPI/CDN connection; the GitHub wheel is an alternative. |
 | Missing key or 401 | Copy the full raw application token; check expiry, permissions and service access. |
 | 403 or insufficient balance | Inspect the upstream SDK error and account limits; do not generate repeatedly. |
 | 429 or network timeout | Automatic retries are off; inspect submission/task history before another generation. |
@@ -169,9 +173,10 @@ prove a paid generation, final media, a unique bill, official listing or revenue
 
 This package follows LlamaIndex's independent integration naming and namespace.
 [Upstream policy](https://github.com/run-llama/llama_index/blob/main/CONTRIBUTING.md)
-no longer accepts new packages in the monorepo. The existing authorized organization publisher is reused. The shared registry
-new-project quota is the current PyPI gate; GitHub assets are independent.
-See [release and retry details](docs/distribution.md).
+no longer accepts new packages in the monorepo. Version 0.1.0 is already published
+on PyPI using the existing authorized publisher. See [distribution details](docs/distribution.md).
+The original wheel/sdist and their PyPI long description remain immutable; this
+repository documentation corrects their historical publication status.
 The old LlamaHub site has moved to the
 [current official integration docs](https://developers.llamaindex.ai/python/framework/community/integrations/).
 Official discoverability and default inclusion are not claimed.
