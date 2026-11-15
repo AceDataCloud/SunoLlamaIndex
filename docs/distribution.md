@@ -1,25 +1,33 @@
 # Release and official discovery
 
-Source implementation is merged. Version: **0.1.0**.
+Version **0.1.0** is published on [PyPI](https://pypi.org/project/llama-index-tools-suno-acedatacloud/0.1.0/).
 
-- GitHub release (wheel + sdist): https://github.com/AceDataCloud/SunoLlamaIndex/releases/tag/v0.1.0
-- Installable wheel: https://github.com/AceDataCloud/SunoLlamaIndex/releases/download/v0.1.0/llama_index_tools_suno_acedatacloud-0.1.0-py3-none-any.whl
-- Package: `llama-index-tools-suno-acedatacloud`.
+```bash
+python -m pip install "llama-index-tools-suno-acedatacloud==0.1.0"
+```
 
-The existing authorized organization `PYPI_TOKEN` is available; no new account or
-Trusted Publisher setup is required for the chosen token publication path. PyPI
-new-project creation is temporarily limited for both the account and source IP.
-The observed shared reset is 2026-10-20 03:23:23 Asia/Shanghai; publication should
-resume only after the reset and a registry readback. No identity or IP workaround.
+The [original GitHub v0.1.0 release](https://github.com/AceDataCloud/SunoLlamaIndex/releases/tag/v0.1.0)
+provides identical wheel and source distributions. Official PyPI metadata and
+both file SHA-256 digests were read back on 2026-11-15. A fresh Python 3.12 consumer
+installed the published package and inspected native tool schemas without an
+API request; dependency checks passed.
 
-A published GitHub release builds and attaches the wheel/sdist independently.
-The maintainer then uses workflow_dispatch on `publish.yml` with the existing
-tag `v0.1.0` to publish the same source after registry quota is available.
-Read the registry version/digests first; never replace immutable release files.
+| File | SHA-256 on GitHub and PyPI |
+|---|---|
+| `llama_index_tools_suno_acedatacloud-0.1.0-py3-none-any.whl` | `8a32e778b7ebe76461d5f70f1fe581a01bde3cc6bacc09f6b93d3615bfe8b159` |
+| `llama_index_tools_suno_acedatacloud-0.1.0.tar.gz` | `33a8ff791a80b7d1e9a24a44da887fceede8003a24f3ed23abb3b1e9b32bbace` |
 
-Official discovery contribution: https://github.com/run-llama/llama_index/pull/23574 .
-It is not accepted or merged yet. New integration packages stay independent under
-https://github.com/run-llama/llama_index/blob/main/CONTRIBUTING.md .
-GitHub installation, PyPI publication, official listing, native real-task validation
-and billing/acquisition are separate stages. The release is not official endorsement.
-No paid test, new account, terms acceptance or permission expansion is part of this workflow.
+The existing authorized publisher completed publication. Do not retry this
+successful version, rebuild or replace its release assets. The immutable 0.1.0
+package long description retains its historical pre-publication wording; current
+repository documentation records the verified publication state. Future releases
+require their normal review, new-version and registry verification process.
+
+The [official documentation contribution](https://github.com/run-llama/llama_index/pull/23574)
+is still subject to maintainer review. Publication and installation do not imply
+official listing, default inclusion, endorsement, live media quality or billing
+validation. LlamaIndex's [contribution policy](https://github.com/run-llama/llama_index/blob/main/CONTRIBUTING.md)
+requires new integration packages to be maintained independently.
+
+No new account, permission expansion, terms acceptance or paid generation was
+needed for these publication and installation checks.

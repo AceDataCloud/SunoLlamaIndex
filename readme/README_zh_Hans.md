@@ -10,11 +10,14 @@
 ## 1. 安装正确的包
 
 标准发行名：`llama-index-tools-suno-acedatacloud`，Python 3.10+。
-**源码已合并；GitHub v0.1.0 发行入口：https://github.com/AceDataCloud/SunoLlamaIndex/releases/tag/v0.1.0 。** PyPI 受共享新项目额度限制，官方收录仍待审批。先核发行页工件已齐，再安装 wheel：
+**PyPI 0.1.0 已发布**：[正式页面](https://pypi.org/project/llama-index-tools-suno-acedatacloud/0.1.0/)。Python 3.10+，包名 `llama-index-tools-suno-acedatacloud`；官方收录仍待审。
 
 ```bash
-python -m pip install "https://github.com/AceDataCloud/SunoLlamaIndex/releases/download/v0.1.0/llama_index_tools_suno_acedatacloud-0.1.0-py3-none-any.whl"
+python -m pip install "llama-index-tools-suno-acedatacloud==0.1.0"
 ```
+
+[GitHub v0.1.0](https://github.com/AceDataCloud/SunoLlamaIndex/releases/tag/v0.1.0) 提供同字节 wheel/sdist 备用。
+2026-11-15 已核官方 PyPI 双工件哈希，并用全新 Python3.12 消费者检查原生工具 schema 和依赖，无 API 请求。
 
 不是旧的检索教程；这是可导入的原生 `BaseToolSpec` 包。
 
@@ -93,11 +96,11 @@ CI 在新环境安装 wheel 再执行；不发真实 API，不产生真实音乐
 
 ## 常见问题
 
-- PyPI 找不到：共享新项目额度未恢复，使用GitHub正式wheel；发包与官方收录分别验收。
+- 安装失败：核对上述正式包名、Python3.10+ 与 PyPI/CDN 网络；GitHub wheel 可备用。发包与官方收录分别验收。
 - 401：重查完整 Token、有效期、应用与 Suno 权限。
 - 403/余额不足：读 SDK 错误与当前账户限制，不能反复生成碰碰运气。
 - 429/网络超时：禁重试；先查是否已提交，再决定下一步。
 - 一直 pending：等 15 秒查同一 ID，预览不是终态。
 - 查任务无权限：同一应用 Key 必须有 `/suno/tasks` 权限；知道别人的 task ID 不等于有权限。
 
-现有组织PYPI_TOKEN已确认可用，不需要新账号或另配Trusted Publisher。当前PyPI门槛为共享账号/IP新建项目额度，已知重置时间2026-10-20 03:23:23（北京时间）；发行GitHub wheel与它分开。管理员届时先读registry，再对既有v0.1.0标签手动执行publish.yml发布，不换身份/IP。官方收录单独验收；不能把本地安装当成官方可搜安装。
+现有发布身份已完成 PyPI 0.1.0 发布，安装不需要新账号或扩权。已发行 wheel/sdist 与 PyPI 长描述保留原始快照，当前仓库文档修正历史“未发布”措辞；不覆盖成功版本。后续版本走正常评审与发行流程；官方收录仍单独验收。
