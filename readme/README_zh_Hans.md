@@ -24,7 +24,7 @@ python -m pip install "llama-index-tools-suno-acedatacloud==0.1.0"
 ## 2. 注册、登录并取得正确 API Token
 
 1. [注册/登录 Ace Data Cloud](https://platform.acedata.cloud?utm_source=llamaindex&utm_medium=referral&utm_campaign=evergreen&utm_content=suno_llamaindex_register_zh)，打开[应用控制台](https://platform.acedata.cloud/console/applications?utm_source=llamaindex&utm_medium=referral&utm_campaign=evergreen&utm_content=suno_llamaindex_api_key_zh)。
-2. 找到 **General application**；没有时点击 **Initialize General Application**。
+2. 找到 **General application**。
    通用应用 Key 受当前服务权限约束，专用应用仅限指定服务。检查 Suno 模型可用性、权限、余额和价格。
 3. 复制已有 API Key，或 **Manage Keys → Create** 创建 `LlamaIndex Suno` 专用 Key。
 

@@ -36,8 +36,8 @@ The package uses the published Ace SDK; it does not copy shared SDK or MCP code.
 ## 2. Register and get an application API Token
 
 1. [Register or sign in to Ace Data Cloud](https://platform.acedata.cloud?utm_source=llamaindex&utm_medium=referral&utm_campaign=evergreen&utm_content=suno_llamaindex_register).
-2. Open [Applications](https://platform.acedata.cloud/console/applications?utm_source=llamaindex&utm_medium=referral&utm_campaign=evergreen&utm_content=suno_llamaindex_api_key). Find **General application**;
-   if absent, select **Initialize General Application**. Its key can use services
+2. Open [Applications](https://platform.acedata.cloud/console/applications?utm_source=llamaindex&utm_medium=referral&utm_campaign=evergreen&utm_content=suno_llamaindex_api_key). Find **General application**.
+   Its key can use services
    your account is entitled to. A service-specific application's key is limited
    to that service.
 3. Copy an existing API Key, or choose **Manage Keys → Create** for a dedicated
